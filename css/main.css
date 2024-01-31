@@ -29,6 +29,10 @@
  */
 
 
+
+
+
+
 /** 
  * ===================================================================
  * 01. webfonts and iconfonts - (_document-setup.scss)
@@ -38,6 +42,7 @@
 @import url("fonts.css");
 @import url("font-awesome/css/font-awesome.min.css");
 @import url("micons/micons.css");
+@import url("/node_modules/flag-icons/css/flag-icons.min.css");
 
 
 /** 
@@ -385,6 +390,22 @@ img.pull-right {
 img.pull-left {
 	margin: .9rem 2.4rem 0 0;
 }
+
+
+#language-selector {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+#language-selector img {
+  width: 30px; /* Ajuste este valor conforme necessário */
+  height: auto;
+  cursor: pointer;
+}
+
+
 
 /**
  * block grid paddings - (_document-setup.scss) 

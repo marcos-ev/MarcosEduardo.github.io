@@ -9,6 +9,33 @@
 
 	"use strict";
 
+	document.addEventListener('DOMContentLoaded', function() {
+    var languageIcon = document.getElementById('language-icon');
+    
+    if (languageIcon) {
+        languageIcon.addEventListener('click', function() {
+            changeLanguage('en');
+        });
+    }
+});
+
+// função changeLanguage 
+
+
+
+	function changeLanguage(lang) {
+		var selectField = document.querySelector("#google_translate_element select");
+		for(var i = 0; i < selectField.children.length; i++){
+			var option = selectField.children[i];
+			if(option.value.indexOf(lang) != -1) {
+				 selectField.selectedIndex = i;
+				 selectField.dispatchEvent(new Event('change'));
+				 break;
+			}
+		}
+	}
+	
+	
 	/*---------------------------------------------------- */
 	/* Preloader
 	------------------------------------------------------ */ 
